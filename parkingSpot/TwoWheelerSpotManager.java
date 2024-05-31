@@ -8,13 +8,13 @@ import parkingStrategy.ParkingStrategy;
 public class TwoWheelerSpotManager extends ParkingSpotManager {
    // is a relation with ParkingSpotManager
    // we can pass any park strategy like nearEntry or nearExit
-   TwoWheelerSpotManager(List<ParkingSpot> parkingSpots, ParkingStrategy parkingStrategy) {
-      super(parkingSpots, parkingStrategy);
+   TwoWheelerSpotManager(List<ParkingSpot> parkingSpots) {
+      super(parkingSpots);
    }
 
    @Override
-   ParkingSpot findParkingSpot() {
+   public ParkingSpot findParkingSpot(ParkingStrategy parkingStrategy) {
       // Implement nearest finding algorithm;
-      return null;
+      return parkingSpots.get(0);
    }
 }
